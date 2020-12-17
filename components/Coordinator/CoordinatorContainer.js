@@ -6,9 +6,9 @@ const mapStateToProps = ({ coordinatorReducer }) => ({
   ...coordinatorReducer,
 });
 
-const mapStateToDispatch = (dispatch) => ({
-  getResponsibles: () => getResponsibles(dispatch),
-  setField: (data, event) => setField(dispatch, data, event),
-});
+const mapStateToDispatch = {
+  getResponsibles,
+  setField,
+};
 
 export default connect(mapStateToProps, mapStateToDispatch)(Coordinator);

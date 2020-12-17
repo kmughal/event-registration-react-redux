@@ -6,9 +6,9 @@ const mapStateToProps = ({ aboutReducer }) => ({
   ...aboutReducer,
 });
 
-const mapStateToDispatch = (dispatch) => ({
-  getCategories: () => getCategories(dispatch),
-  setField: (data, event) => setField(dispatch, data, event),
-});
+const mapStateToDispatch = {
+  getCategories,
+  setField,
+};
 
 export default connect(mapStateToProps, mapStateToDispatch)(About);
